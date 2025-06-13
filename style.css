@@ -439,7 +439,42 @@ nav h3 {
     background-color: #EFEAE3;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
 
+#full-div1 { /* Existing, ensure it's ready for content */
+    display: flex; /* To help center content */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px; /* Add some padding */
+    padding-bottom: 20px;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center links horizontally */
+    gap: 20px; /* Space between links */
+}
+
+.mobile-nav-links h4 {
+    padding: 0; /* Reset padding from desktop if any applies */
+    border: none; /* Reset border from desktop if any applies */
+    font-size: 24px; /* Make text larger for mobile */
+    font-weight: 600; /* Make it a bit bolder */
+}
+
+.mobile-nav-links h4::after { /* Disable the hover effect from desktop */
+    display: none;
+}
+
+.mobile-nav-links h4 a {
+    color: #333; /* Ensure good contrast on #EFEAE3 background */
+    text-decoration: none;
+}
+
+.mobile-nav-links h4 a:hover { /* Simple hover effect for mobile */
+    color: #FE320A; /* Example hover color */
 }
 
 @media (max-width:600px) {
