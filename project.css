@@ -1,0 +1,24 @@
+.container-project {
+    margin-top: 10vh;
+}
+
+.project-button {
+    border-radius: 15px;
+    background-color: rgb(51, 164, 230);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    border: none;
+    color: white;
+    box-shadow: -8px 7px 88px -28px rgba(26,25,25,0.6);
+    -webkit-box-shadow: -8px 7px 88px -28px rgba(26,25,25,0.6);
+    -moz-box-shadow: -8px 7px 88px -28px rgba(26,25,25,0.6);
+}
+
+.project-button a {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    font-family: inherit;
+    /* box-shadow: inherit; */ /* Inheriting box-shadow on an 'a' tag from its parent button might not be standard or have the intended effect. Let's omit it unless visual regression occurs. */
+}
