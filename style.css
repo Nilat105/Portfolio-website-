@@ -1,8 +1,25 @@
+    @font-face {
+    font-family: neu;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+    font-family: neu;
+    font-weight: 100;
+    src: url(./NeueHaasDisplayLight.ttf);
+}
+
+@font-face {
+    font-family: neu;
+    font-weight: 200;
+    src: url(./NeueHaasDisplayRoman.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: neu, Arial, Helvetica, sans-serif; /* Combined font stack */
 }
 
 html, body {
@@ -10,13 +27,12 @@ html, body {
     width: 100%;
 }
 
-.main {
-    /* background-color: #000; */
+#main {
     position: relative;
     z-index: 10;
 }
 
-.page1 {
+#page1 {
     min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
@@ -27,7 +43,6 @@ html, body {
 nav {
     padding: 2vw 0vw;
     width: 100%;
-    /* background-color: red; */
     display: flex;
     align-items: center;
     position: relative;
@@ -35,13 +50,13 @@ nav {
     justify-content: space-between;
 }
 
-.nav-part2 {
+#nav-part2 {
     display: flex;
     align-items: center;
     gap: 1vw;
 }
 
-.nav-part2 h4 {
+#nav-part2 h4 {
     padding: 10px 20px;
     border: 1px solid #0000003c;
     border-radius: 50px;
@@ -53,7 +68,7 @@ nav {
     overflow: hidden;
 }
 
-.nav-part2 h4::after {
+#nav-part2 h4::after {
     content: "";
     position: absolute;
     height: 100%;
@@ -65,19 +80,19 @@ nav {
     transition: all ease 0.4s;
 }
 
-.nav-part2 h4:hover::after {
+#nav-part2 h4:hover::after {
     bottom: 0;
     border-radius: 0;
 }
 
-.nav-part2 h4 a {
+#nav-part2 h4 a {
     color: #000000bb;
     text-decoration: none;
     position: relative;
     z-index: 9;
 }
 
-.nav-part2 h4:hover a {
+#nav-part2 h4:hover a {
     color: #fff;
 }
 
@@ -85,10 +100,9 @@ nav h3 {
     display: none;
 }
 
-.center {
+#center {
     height: 65vh;
     width: 100%;
-    /* background-color: orange; */
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -96,33 +110,34 @@ nav h3 {
     padding-bottom: 2.5vw;
 }
 
-.left h3 {
+#left h3 {
     width: 25vw;
     font-size: 1.8vw;
     line-height: 2vw;
 }
 
-.center h1 {
+#center h1 {
     font-size: 10vw;
     text-align: right;
     line-height: 8vw;
 }
 
-.page1 video {
+#page1 video {
     position: relative;
     border-radius: 30px;
     margin-top: 4vw;
     width: 100%;
 }
 
+/* Added from original style.css - unique style */
 .video-placeholder {
     width: 100%;
     border-radius: 30px;
     margin-top: 4vw;
-    display: block; /* To ensure margin-top works as expected */
+    display: block;
 }
 
-.hero-shape {
+#hero-shape {
     position: absolute;
     width: 46vw;
     height: 36vw;
@@ -130,7 +145,7 @@ nav h3 {
     top: 65vh;
 }
 
-.hero-1 {
+#hero-1 {
     background-color: #FE320A;
     height: 100%;
     width: 100%;
@@ -140,9 +155,8 @@ nav h3 {
     position: absolute;
 }
 
-.hero-2 {
+#hero-2 {
     background: linear-gradient(#FE320A, #fe3f0a);
-
     height: 30vw;
     width: 30vw;
     border-radius: 50%;
@@ -155,7 +169,7 @@ nav h3 {
     filter: blur(25px);
 }
 
-.hero-3 {
+#hero-3 {
     background: linear-gradient(#FE320A, #fe3f0a);
     height: 30vw;
     position: absolute;
@@ -173,7 +187,6 @@ nav h3 {
     from {
         transform: translate(55%, -3%);
     }
-
     to {
         transform: translate(0%, 10%);
     }
@@ -183,13 +196,12 @@ nav h3 {
     from {
         transform: translate(5%, -5%);
     }
-
     to {
         transform: translate(-20%, 30%);
     }
 }
 
-.page2 {
+#page2 {
     min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
@@ -197,16 +209,16 @@ nav h3 {
     position: relative;
 }
 
-.moving-text {
+#moving-text {
     overflow-x: auto;
     white-space: nowrap;
 }
 
-.moving-text::-webkit-scrollbar {
+#moving-text::-webkit-scrollbar {
     display: none;
 }
 
-.con {
+.con { /* This was .con in Contact.css and style.css */
     white-space: nowrap;
     display: inline-block;
     animation-name: move;
@@ -215,13 +227,12 @@ nav h3 {
     animation-iteration-count: infinite;
 }
 
-.moving-text h1 {
+#moving-text h1 {
     font-size: 9vw;
-    /* background-color: lightblue; */
     display: inline-block;
 }
 
-.gola {
+#gola { /* This was #gola in Contact.css, but .gola in style.css and index.html. Using #gola from Contact.css */
     height: 70px;
     width: 70px;
     border-radius: 50%;
@@ -234,55 +245,61 @@ nav h3 {
     from {
         transform: translateX(0);
     }
-
     to {
         transform: translateX(-100%);
     }
 }
 
-.page2-bottom {
+#page2-bottom {
     height: 80vh;
     width: 100%;
-    /* background-color: aliceblue; */
     padding: 4.5vw;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+    position: relative; /* from Contact.css */
+    justify-content: space-between; /* from Contact.css */
+    /* align-items: center; was in style.css, removed as Contact.css is base */
     z-index: 9;
 }
 
-.page2-bottom h1 {
+/* Added from Contact.css - unique style */
+#pageA {
+    padding: 4.5vw;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    z-index: 9;
+}
+
+#page2-bottom h1 { /* Contact.css and style.css both had h1 here */
     font-size: 4vw;
     width: 60%;
     line-height: 4vw;
 }
 
-.bottom-part2 {
-    width: 20%;
-    /* background-color: aqua; */
+#bottom-part2 { /* Contact.css had more specific styling (min-height, padding) */
+    min-height: 100vw; /* from Contact.css */
+    width: 20%; /* from style.css, also in Contact.css */
+    position: relative; /* from Contact.css */
+    padding: 0 2vw; /* from Contact.css */
 }
 
-.bottom-part2 img {
+#bottom-part2 img {
     width: 100%;
     border-radius: 15px;
 }
 
-.bottom-part2 p {
+#bottom-part2 p {
     font-weight: 200;
     margin-top: 2vw;
     font-size: 1vw;
 }
 
-.page2 .gooey {
+#page2 #gooey { /* This was #page2 #gooey in Contact.css and .page2 .gooey in style.css. ID from Contact.css is fine. */
     height: 32vw;
     width: 32vw;
     position: absolute;
     border-radius: 50%;
     background: linear-gradient(to top right, #ff2d03, #ff5c0b);
-    /* background: linear-gradient(to top right,red,blue); */
-
-
     top: 58%;
     left: 25%;
     filter: blur(20px);
@@ -291,7 +308,6 @@ nav h3 {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
-
 }
 
 @keyframes gooey {
@@ -299,17 +315,13 @@ nav h3 {
         filter: blur(20px);
         transform: translate(10%, -10%) skew(0);
     }
-
     to {
         filter: blur(30px);
         transform: translate(-10%, 10%) skew(-12deg);
     }
 }
 
-
-
-
-.page3 {
+#page3 {
     min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
@@ -320,7 +332,6 @@ nav h3 {
     height: 150px;
     width: 100%;
     position: relative;
-
     border-bottom: 1px solid #38383864;
     overflow: hidden;
     display: flex;
@@ -348,12 +359,9 @@ nav h3 {
     top: 0;
 }
 
-
-
 #fixed-image {
     height: 30vw;
     width: 24vw;
-    /* background-color: red; */
     border-radius: 15px;
     position: fixed;
     z-index: 99;
@@ -385,7 +393,6 @@ nav h3 {
 #page5 {
     height: 100vh;
     width: 100%;
-    /* background-color: #EFEAE3; */
 }
 
 #footer {
@@ -397,7 +404,6 @@ nav h3 {
     z-index: 9;
     bottom: 0;
     display: flex;
-    /* align-items: flex-end; */
     justify-content: flex-end;
     flex-direction: column;
     padding: 1vw 3vw;
@@ -407,7 +413,7 @@ nav h3 {
     font-size: 23vw;
 }
 
-#footer-div {
+#footer-div { /* This was in Contact.css, not style.css */
     height: 20vh;
     width: 100%;
     background-color: red;
@@ -429,57 +435,58 @@ nav h3 {
     transition: all ease 0.5s;
 }
 
+/* Added from original style.css - unique style */
 #full-scr.menu-active {
     top: 0;
 }
 
-#full-div1 {
+#full-div1 { /* Base from Contact.css */
     height: 50%;
     width: 100%;
     background-color: #EFEAE3;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-}
-
-#full-div1 { /* Existing, ensure it's ready for content */
-    display: flex; /* To help center content */
+    /* Added/merged from original style.css for mobile menu */
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 20px; /* Add some padding */
+    padding-top: 20px;
     padding-bottom: 20px;
 }
 
+/* Added from original style.css for mobile menu - unique styles */
 .mobile-nav-links {
     display: flex;
-    flex-direction: column; /* Stack links vertically */
-    align-items: center; /* Center links horizontally */
-    gap: 20px; /* Space between links */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .mobile-nav-links h4 {
-    padding: 0; /* Reset padding from desktop if any applies */
-    border: none; /* Reset border from desktop if any applies */
-    font-size: 24px; /* Make text larger for mobile */
-    font-weight: 600; /* Make it a bit bolder */
+    padding: 0;
+    border: none;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.mobile-nav-links h4::after { /* Disable the hover effect from desktop */
+.mobile-nav-links h4::after {
     display: none;
 }
 
 .mobile-nav-links h4 a {
-    color: #333; /* Ensure good contrast on #EFEAE3 background */
+    color: #333;
     text-decoration: none;
 }
 
-.mobile-nav-links h4 a:hover { /* Simple hover effect for mobile */
-    color: #FE320A; /* Example hover color */
+.mobile-nav-links h4 a:hover {
+    color: #FE320A;
 }
 
+/* Media queries from Contact.css (base) */
 @media (max-width:600px) {
 
-    .page1 {
+    #page1 {
         min-height: 100vh;
         width: 100vw;
         padding: 0 0vw;
@@ -488,7 +495,6 @@ nav h3 {
     nav {
         padding: 8vw 5vw;
         background-color: #EFEAE3;
-        /* padding: 0 5vw; */
     }
 
     nav img {
@@ -496,7 +502,7 @@ nav h3 {
         height: 9vh;
     }
 
-    .nav-part2 {
+    #nav-part2 { /* This was #nav-part2 in Contact.css and .nav-part2 in style.css. Using ID. */
         display: none;
     }
 
@@ -510,10 +516,9 @@ nav h3 {
         padding-left: 10vw;
     }
 
-    .center {
+    #center { /* This was #center in Contact.css and .center in style.css. Using ID. */
         height: 62vh;
         width: 100%;
-        /* background-color: orange; */
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
@@ -525,19 +530,19 @@ nav h3 {
         z-index: 9;
     }
 
-    .left h3 {
+    #left h3 { /* #left h3 in Contact.css, .left h3 in style.css. Using ID. */
         width: 80%;
         font-size: 5.5vw;
         line-height: 6vw;
     }
 
-    .center h1 {
+    #center h1 { /* #center h1 in Contact.css, .center h1 in style.css. Using ID. */
         font-size: 17vw;
         text-align: right;
         line-height: 15vw;
     }
 
-    .page1 video {
+    #page1 video { /* #page1 video in Contact.css, .page1 video in style.css. Using ID. */
         position: relative;
         border-radius: 15px;
         margin-top: 4vw;
@@ -548,7 +553,7 @@ nav h3 {
         margin-left: 4%;
     }
 
-.page2 {
+    #page2 { /* #page2 in Contact.css, .page2 in style.css. Using ID. */
         min-height: 100vh;
         width: 100%;
         background-color: #EFEAE3;
@@ -556,16 +561,16 @@ nav h3 {
         position: relative;
     }
 
-    .moving-text {
+    #moving-text { /* #moving-text in Contact.css, .moving-text in style.css. Using ID. */
         overflow-x: auto;
         white-space: nowrap;
     }
 
-    .moving-text::-webkit-scrollbar {
+    #moving-text::-webkit-scrollbar {
         display: none;
     }
 
-    .con {
+    .con { /* .con was consistent */
         white-space: nowrap;
         display: inline-block;
         animation-name: move;
@@ -574,13 +579,12 @@ nav h3 {
         animation-iteration-count: infinite;
     }
 
-.moving-text h1 {
+    #moving-text h1 { /* #moving-text h1 in Contact.css, .moving-text h1 in style.css. Using ID. */
         font-size: 15vw;
-        /* background-color: lightblue; */
         display: inline-block;
     }
 
-.gola {
+    #gola { /* #gola in Contact.css, .gola in style.css. Using ID. */
         height: 25px;
         width: 25px;
         border-radius: 50%;
@@ -589,50 +593,45 @@ nav h3 {
         margin: 2vw 2vw;
     }
 
-    .page2-bottom {
+    #page2-bottom { /* #page2-bottom in Contact.css, .page2-bottom in style.css. Using ID. */
         height: 90vh;
         width: 100%;
-        /* background-color: aliceblue; */
         padding: 10vw 4vw;
         display: flex;
-        align-items: flex-start;
+        align-items: flex-start; /* This was in style.css media query */
         justify-content: space-between;
         position: relative;
-        flex-direction: column;
+        flex-direction: column; /* This was in style.css media query */
         z-index: 9;
     }
 
-    .page2-bottom h1 {
+    #page2-bottom h1 { /* #page2-bottom h1 in Contact.css, .page2-bottom h1 in style.css. Using ID. */
         font-size: 8.2vw;
         width: 100%;
         line-height: 9vw;
     }
 
-    .bottom-part2 {
+    #bottom-part2 { /* #bottom-part2 in Contact.css, .bottom-part2 in style.css. Using ID. */
         width: 70%;
-        /* background-color: aqua; */
     }
 
-    .bottom-part2 img {
+    #bottom-part2 img { /* #bottom-part2 img in Contact.css, .bottom-part2 img in style.css. Using ID. */
         width: 100%;
         border-radius: 10px;
     }
 
-    .bottom-part2 p {
+    #bottom-part2 p { /* #bottom-part2 p in Contact.css, .bottom-part2 p in style.css. Using ID. */
         font-weight: 200;
         margin-top: 2vw;
         font-size: 3vw;
     }
 
-    .page2 .gooey {
+    #page2 #gooey { /* #page2 #gooey in Contact.css, .page2 .gooey in style.css. Using ID. */
         height: 62vw;
         width: 62vw;
         position: absolute;
         border-radius: 50%;
         background: linear-gradient(to top right, #ff2d03, #ff5c0b);
-        /* background: linear-gradient(to top right,red,blue); */
-
-
         top: 58%;
         left: 25%;
         filter: blur(20px);
@@ -641,12 +640,10 @@ nav h3 {
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease-in-out;
-
     }
+} /* End of main @media (max-width:600px) block */
 
-
-}
-
+/* Loader styles (were identical in both files) */
 #loader{
     height: 100%;
     width: 100%;
@@ -694,9 +691,9 @@ nav h3 {
     }
 }
 
+/* Loader specific media query (was identical in both files) */
 @media (max-width:600px) {
     #loader h1{
         font-size: 9vw;
-      
     }
 }

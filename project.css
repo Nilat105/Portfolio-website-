@@ -22,3 +22,50 @@
     font-family: inherit;
     /* box-shadow: inherit; */ /* Inheriting box-shadow on an 'a' tag from its parent button might not be standard or have the intended effect. Let's omit it unless visual regression occurs. */
 }
+
+/* Styles merged from Project.css (uppercase P) */
+.container { /* Used in Project.html for the card container */
+  display: flex;
+  min-height: 6vh; /* from Project.css */
+  /* width: 1040px; /* This was in Project.css, consider if this is needed or should be responsive */
+  /* max-width: 1040px; /* A more responsive alternative */
+  /* margin-left: auto; /* To center if max-width is used */
+  /* margin-right: auto; /* To center if max-width is used */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-left: 2vw; /* Added for some spacing similar to other pages */
+  padding-right: 2vw; /* Added for some spacing similar to other pages */
+}
+
+.card {
+  margin: 10px;
+  background-color: #EFEAE3; /* Matches page background */
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px; /* Fixed width for cards */
+  display: flex; /* Added to help structure card content */
+  flex-direction: column; /* Added to stack card header and body */
+}
+
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Simplified from -o-object-fit */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Changed from center to space-between for better content distribution */
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 200px; /* Adjusted from 250px, can be flexible */
+  flex-grow: 1; /* Allow card body to take remaining space */
+}
+
+/* Ensure project-button is well-styled within card-body */
+.card-body .project-button {
+    margin-top: auto; /* Pushes button to the bottom if card-body uses flex-grow */
+    align-self: flex-start; /* Align button to the start if needed */
+}
